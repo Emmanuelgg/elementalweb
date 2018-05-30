@@ -1,0 +1,6 @@
+.imageTitle{
+    width: 100%;
+    height: 400px;
+    background-image: url("/assets/images/paralax.jpg");
+    opacity: 0.5;
+}
