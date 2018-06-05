@@ -2,7 +2,7 @@
 ------------------------------------
 	Labs - Design Studio
 	Version: 1.0
- ------------------------------------ 
+ ------------------------------------
  ====================================*/
 
 'use strict';
@@ -11,8 +11,8 @@
 	Preloder
 --------------------*/
 function loader() {
-	$(window).on('load', function() { 
-		$(".loader").fadeOut(); 
+	$(window).on('load', function() {
+		$(".loader").fadeOut();
 		$("#preloder").delay(400).fadeOut("slow");
 	});
 }
@@ -23,7 +23,7 @@ function loader() {
 	Navigation
 --------------------*/
 function responsive() {
-	// Responsive 
+	// Responsive
 	$('.responsive').on('click', function(event) {
 		$('.menu-list').slideToggle(400);
 		event.preventDefault();
@@ -46,7 +46,7 @@ function heroSection() {
 			'background-position': 'center bottom'
 		});
 	});
-	//slider auto height 
+	//slider auto height
 	var iit = setInterval(slide_item, 1);
 
 	function slide_item() {
@@ -57,9 +57,9 @@ function heroSection() {
 
 	var time = 7;
 	var $progressBar,
-		$bar, 
-		$elem, 
-		isPause, 
+		$bar,
+		$elem,
+		isPause,
 		tick,
 		percentTime;
 
@@ -78,7 +78,7 @@ function heroSection() {
 	});
 
 	// Init progressBar where elem is $("#owl-demo")
-	function progressBar(){    
+	function progressBar(){
 		// build progress bar elements
 		buildProgressBar();
 
@@ -115,14 +115,14 @@ function heroSection() {
 
 			// if percentTime is equal or greater than 100
 			if(percentTime >= 100){
-				// slide to next item 
+				// slide to next item
 				$("#hero-slider").trigger("next.owl.carousel");
 				percentTime = 0; // give the carousel at least the animation time ;)
 			}
 		}
 	}
 
-	// pause while dragging 
+	// pause while dragging
 	function pauseOnDragging(){
 		isPause = true;
 	}
@@ -155,7 +155,7 @@ function videoPopup() {
 	Testimonial
 --------------------*/
 function testimonial() {
-	// testimonial Carousel 
+	// testimonial Carousel
 	$('#testimonial-slide').owlCarousel({
 		loop:true,
 		autoplay:true,
@@ -267,3 +267,14 @@ function progressCircle() {
 	progressCircle();
 
 })(jQuery);
+
+function init() {
+    loader();
+	responsive();
+	heroSection();
+	testimonial();
+	progressbar();
+	videoPopup();
+	accordions();
+	progressCircle();
+}

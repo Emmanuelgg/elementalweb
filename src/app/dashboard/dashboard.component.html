@@ -1,22 +1,161 @@
-<div class="row justify-content-center imageTitle">
-  <div class="col-10">
-    <p style="color:white;">Elemental</p>
-  </div>
-</div>
 
-<div class="row justify-content-center">
-    <div class="col-10">
-        <h3>Servicios</h3>
-    </div>
-</div>
-
-<app-about-us></app-about-us>
-<app-contact></app-contact>
-
-<!-- <div class="cointainer-fluid">
-    <div class="row justify-content-md-center">
-        <div class="col-10">
-            <h3>Servicios</h3>
+<!-- Intro Section -->
+<div class="hero-section">
+    <div class="hero-content">
+        <div class="hero-center">
+            <img src="/assets/img/big-logo.png" alt="">
+            <p>Nosotros creamos las herramientas para tu negocio!</p>
         </div>
     </div>
-</div> -->
+    <!-- slider -->
+    <div id="hero-slider" class="owl-carousel">
+        <div class="item  hero-item" data-bg="/assets/img/01.jpg"></div>
+        <div class="item  hero-item" data-bg="/assets/img/02.jpg"></div>
+    </div>
+</div>
+<!-- Intro Section -->
+
+
+<!-- About section -->
+<div class="about-section">
+    <div class="overlay"></div>
+    <!-- card section -->
+    <div class="card-section">
+        <div class="container">
+            <div class="row">
+                <!-- single card -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="lab-card">
+                        <div class="icon">
+                            <i class="flaticon-023-flask"></i>
+                        </div>
+                        <h2>Ideas</h2>
+                        <p>Con tus ideas podemos crear las herramientas nesesarias para que tu negocio crezca día a día.</p>
+                    </div>
+                </div>
+                <!-- single card -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="lab-card">
+                        <div class="icon">
+                            <i class="flaticon-011-compass"></i>
+                        </div>
+                        <h2>Desarrollo</h2>
+                        <p>Nuestro equipo se encarga de hacer que tus ideas se hagan realidad.</p>
+                    </div>
+                </div>
+                <!-- single card -->
+                <div class="col-md-4 col-sm-12">
+                    <div class="lab-card">
+                        <div class="icon">
+                            <i class="flaticon-037-idea"></i>
+                        </div>
+                        <h2>Servicio</h2>
+                        <p>Una vez que nuestro equipo termina de desarrolla las herramientas nesesarias en base a tus ideas y nesecidades el producto esta listo para.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- card section end-->
+
+
+    <!-- About contant -->
+    <div class="about-contant">
+        <div class="container">
+            <div class="section-title">
+                <h2>Ven y haz que tu negocio crezca con <span>elemental</span></h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Somos una empresa socialmente responsable, nos dedicamos a ayudar a personas como tu que necesitan ayuda para que sus negocios crezcan y sean mas conocidas a travez de la tecnologia</p>
+                </div>
+                <div class="col-md-6">
+                    <p>Lo mas importante para nosotros eres tu, es por eso que contamos con asistencia tecnica excusiva para ti.</p>
+                </div>
+            </div>
+            <div class="text-center mt60">
+                <a [routerLink]="['../services']" class="site-btn">Ver servicios</a>
+            </div>
+            <!-- popup video -->
+            <!-- <div class="intro-video">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <img src="img/video.jpg" alt="">
+                        <a href="https://www.youtube.com/watch?v=JgHfx2v9zOU" class="video-popup">
+                            <i class="fa fa-play"></i>
+                        </a>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</div>
+<!-- About section end -->
+
+
+<!-- Testimonial section -->
+<div class="testimonial-section pb100">
+    <div class="test-overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-4">
+                <div class="section-title left">
+                    <h2>Nuestros clientes</h2>
+                </div>
+                <div class="owl-carousel" id="testimonial-slide">
+                    <!-- single testimonial -->
+                    <div class="testimonial">
+                        <span>‘​‌‘</span>
+                        <p>Exelente trabajo, quede muy satisfecho con mi sitio web</p>
+                        <div class="client-info">
+                            <div class="avatar">
+                                <img src="img/avatar/01.jpg" alt="">
+                            </div>
+                            <div class="client-name">
+                                <h2>Alejandra Gutierrez</h2>
+                                <p>Centenario</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <span>‘​‌‘​‌</span>
+                        <p>Farmacia</p>
+                        <div class="client-info">
+                            <div class="avatar">
+                                <img src="img/avatar/01.jpg" alt="">
+                            </div>
+                            <div class="client-name">
+                                <h2>Gloria García</h2>
+                                <p>Bio-farma</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Testimonial section end-->
+
+<app-services></app-services>
+
+
+<!-- Promotion section -->
+<div class="promotion-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <h2>¿Ya conoces nuestras ofertas?</h2>
+                <p>Que esperas contactanos para conocer todas nuestras ofertas y haz que tu negocio crezca cada día.</p>
+            </div>
+            <div class="col-md-3">
+                <div class="promo-btn-area">
+                    <a [routerLink]="['../contact']" class="site-btn btn-2">Contactar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Promotion section end-->
+
+<app-contact></app-contact>
