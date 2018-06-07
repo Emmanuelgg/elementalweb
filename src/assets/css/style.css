@@ -340,11 +340,11 @@ ul {
 .hero-content .hero-center {
 	display: table-cell;
 	vertical-align: middle;
-    padding-top: 15%;
+    padding-top: 275px;
 }
 
 .hero-content p {
-	font-size: 24px;
+	font-size: 17pt;
 	color: #0b1033;
 	margin-bottom: 0;
 	margin-top: 35px;

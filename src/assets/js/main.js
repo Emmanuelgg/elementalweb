@@ -50,7 +50,7 @@ function heroSection() {
 	var iit = setInterval(slide_item, 1);
 
 	function slide_item() {
-		var bh = $('body').height()+150;
+		var bh = $('body').height();
 		$('.hero-item').height(bh);
 	}
 	slide_item();
