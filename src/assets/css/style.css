@@ -1758,3 +1758,8 @@ ul {
 	padding-top: 50px;
 	position: relative;
 }
+
+.badge-elemental{
+    color: #6a23b5;
+    background: #2be6ab;
+}
