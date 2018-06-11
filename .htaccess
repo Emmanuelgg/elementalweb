@@ -1,7 +1,13 @@
-RewriteEngine On
+# RewriteEngine On
     # If an existing asset or directory is requested go to it as it is
-    RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
-    RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
-    RewriteRule ^ - [L]
+#    RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
+#    RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
+#    RewriteRule ^ - [L]
     # If the requested resource doesn't exist, use index.html
-RewriteRule ^ /index.html
+# RewriteRule ^ /index.html
+
+RewriteEngine On
+    RewriteRule ^$ http://107.180.3.75:6000/ [P,L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ http://107.180.3.75:6000/$1 [P,L]
