@@ -15,6 +15,13 @@ let response = {
   message: null
 };
 
-console.log('running api')
+router.post('/get/ip/address', function (req, res) {
+    // need access to IP address here
+    response.ok = true;
+    response.data = req.header('x-forwarded-for') || req.connection.remoteAddress;
+    response.status = 1;
+    response.message = {success:"Se obtuvo correctamente la direccion ip",error:""};
+    res.send({response});
+});
 
 module.exports = router;
