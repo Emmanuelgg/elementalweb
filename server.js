@@ -2,7 +2,9 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const http = require('http');
+const https = require('https');
 const app = express();
+const fs = require('fs');
 require('dotenv').load();
 // API file for interacting with MongoDB and Functions to server
 const api = require('./server/routes/api');
@@ -26,10 +28,18 @@ app.get('*', (req, res) => {
 
 //Set Port
 const port = process.env.PORT || '6000';
-app.set('port', port);
+//app.set('port', port);
 
 const server = http.createServer(app);
 server.listen(port, () => console.log(`Running on :${port}`));
 
-//const env = config.get('env');
-console.log(  process.env.PORT );
+
+const credentials = {
+  key: fs.readFileSync('./ssl/private.key', 'utf-8'),
+  cert: fs.readFileSync('./ssl/certificate.crt', 'utf-8')
+};
+
+const https_port = process.env.HTTPS_PORT || '6433';
+//app.set('port', https_port);
+const serverHttps = https.createServer(credentials ,app);
+serverHttps.listen(https_port, () => console.log(`Running on :${https_port}`));
