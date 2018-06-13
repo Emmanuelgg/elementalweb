@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service'
 
+import { HttpClient } from '@angular/common/http';
+
 declare var init:any;
 declare var loader:any;
 declare var $:any
@@ -34,10 +36,7 @@ export class DashboardComponent implements OnInit {
   }
   getIpAdress(){
       this.dataService.getIpAdress().subscribe(
-          (response) =>
-          {
-              this.res = response;
-          }
+          response => console.log(response)
       );
   }
 
