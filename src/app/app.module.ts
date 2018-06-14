@@ -9,7 +9,8 @@ import { AppRoutingModule } from './/app-routing.module';
 import { ContactComponent } from './contact/contact.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ServicesComponent } from './services/services.component';
-
+import { ChallengeComponent } from './challenge/challenge.component';
+import { DetailChallengeComponent } from './challenge/detail-challenge/detail-challenge.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,9 @@ import { ServicesComponent } from './services/services.component';
     DashboardComponent,
     ContactComponent,
     AboutUsComponent,
-    ServicesComponent
+    ServicesComponent,
+    ChallengeComponent,
+    DetailChallengeComponent
   ],
   imports: [
     BrowserModule,

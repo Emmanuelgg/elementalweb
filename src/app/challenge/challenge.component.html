@@ -1,0 +1,25 @@
+<div class="services-section spad fix">
+    <div class="container">
+        <div class="section-title dark">
+            <h2>Concursos <span>Elemental</span></h2>
+        </div>
+        <div class="contact-info">
+            <div class="row text-center">
+                <div class="col-4" *ngFor="let challenge of challenges">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="./assets/img/logo-card.svg" alt="Logo elementalweb concurso">
+                        <div class="card-body">
+                            <h3 class="card-title">{{ challenge.name }}</h3>
+                            <p class="card-text" style="color:#6a23b5;">{{ challenge.description }}</p>
+                            <a [routerLink]="['./detail/1']" class="site-btn">Ver detalles</a>
+                            <br/>
+                            <br/>
+                            <h6>{{ challenge.available }}</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt60"><a class="site-btn" [routerLink]="['../contact']">Contactar</a></div>
+    </div>
+</div>
