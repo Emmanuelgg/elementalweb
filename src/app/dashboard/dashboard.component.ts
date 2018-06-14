@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+
+import { Title }     from '@angular/platform-browser';
+
 import { DataService } from '../data.service'
 
 import { HttpClient } from '@angular/common/http';
@@ -31,7 +34,7 @@ export class DashboardComponent implements OnInit {
 		}
 	]
 
-	constructor(private dataService: DataService) {
+	constructor(private dataService: DataService, private titleService: Title) {
 
 	}
 	res: any;
@@ -42,15 +45,14 @@ export class DashboardComponent implements OnInit {
 			$("#preloder").delay(400).fadeOut("slow");
 		}
 
-	}
-
-	ngBefoewViewInit() {
+		this.titleService.setTitle('Inicio | Elemental web')
 
 	}
+
 	ngOnInit() {
 		this.getIpAdress();
-
 	}
+
 	getIpAdress() {
 		this.dataService.getIpAdress().subscribe(
 			response => console.log(response)

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Title }     from '@angular/platform-browser';
+
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  constructor(private titleService: Title) { }
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  ngAfterViewInit(){
+      this.titleService.setTitle('Contacto | Elemental web')
   }
 
 }

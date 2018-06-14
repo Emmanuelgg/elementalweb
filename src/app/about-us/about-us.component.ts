@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
+import { Title }     from '@angular/platform-browser';
 
 @Component({
 	selector: 'app-about-us',
@@ -6,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 	styleUrls: ['./about-us.component.css']
 })
 export class AboutUsComponent implements OnInit {
+	@Input() appComponent;
 
     team : Array<any> = [
         {
@@ -16,10 +19,12 @@ export class AboutUsComponent implements OnInit {
         }
     ]
 
-	constructor() { }
+	constructor(private titleService: Title) { }
 
-	ngOnInit() {
+	ngOnInit() {}
 
+	ngAfterViewInit(){
+		this.titleService.setTitle('Acerca de | Elemental web')
 	}
 
 }

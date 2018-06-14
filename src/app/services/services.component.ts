@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Title }     from '@angular/platform-browser';
+
 @Component({
 	selector: 'app-services',
 	templateUrl: './services.component.html',
@@ -34,9 +36,12 @@ export class ServicesComponent implements OnInit {
 		}
 	]
 
-	constructor() { }
+	constructor(private titleService: Title) { }
 
-	ngOnInit() {
+	ngOnInit() {}
+
+	ngAfterViewInit(){
+		this.titleService.setTitle('Servicios | Elemental web')
 	}
 
 }
