@@ -14,7 +14,7 @@ export class ContactComponent implements OnInit {
   ngOnInit() {}
 
   ngAfterViewInit(){
-      this.titleService.setTitle('Contacto | Elemental web')
+      this.titleService.setTitle('Elemental | Contacto')
   }
 
 }

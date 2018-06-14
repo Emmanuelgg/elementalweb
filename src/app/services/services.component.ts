@@ -41,7 +41,7 @@ export class ServicesComponent implements OnInit {
 	ngOnInit() {}
 
 	ngAfterViewInit(){
-		this.titleService.setTitle('Servicios | Elemental web')
+		this.titleService.setTitle('Elemental | Servicios')
 	}
 
 }

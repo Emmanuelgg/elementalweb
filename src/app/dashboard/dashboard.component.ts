@@ -45,7 +45,7 @@ export class DashboardComponent implements OnInit {
 			$("#preloder").delay(400).fadeOut("slow");
 		}
 
-		this.titleService.setTitle('Inicio | Elemental web')
+		this.titleService.setTitle('Elemental | Inicio')
 
 	}
 

@@ -24,7 +24,7 @@ export class AboutUsComponent implements OnInit {
 	ngOnInit() {}
 
 	ngAfterViewInit(){
-		this.titleService.setTitle('Acerca de | Elemental web')
+		this.titleService.setTitle('Elemental | Acerca de')
 	}
 
 }
