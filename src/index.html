@@ -1,68 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-  <meta charset="utf-8">
-  <title>Elemental web</title>
-  <base href="/">
+    <head>
+        <meta charset="utf-8">
+        <title>Elemental web</title>
+        <base href="/">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-  <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,700|Roboto:300,400,700" rel="stylesheet">
-  <!-- Facebook Pixel Code -->
-  <script>
-    ! function(f, b, e, v, n, t, s) {
-      if (f.fbq) return;
-      n = f.fbq = function() {
-        n.callMethod ?
-          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-      };
-      if (!f._fbq) f._fbq = n;
-      n.push = n;
-      n.loaded = !0;
-      n.version = '2.0';
-      n.queue = [];
-      t = b.createElement(e);
-      t.async = !0;
-      t.src = v;
-      s = b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t, s)
-    }(window, document, 'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '172304000104616');
-    fbq('track', 'PageView');
-  </script>
-  <noscript>
-      <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=172304000104616&ev=PageView&noscript=1"/>
-  </noscript>
-  <!-- End Facebook Pixel Code -->
+        <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,700|Roboto:300,400,700" rel="stylesheet">
+        <script type="text/javascript" src="./assets/js/pixel-facebook.js"></script>
+        <noscript>
+              <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=172304000104616&ev=PageView&noscript=1"/>
+        </noscript>
+    </head>
 
-</head>
+    <body>
+        <app-root></app-root>
 
-<body>
-  <!-- Page Preloder -->
-  <div id="preloder">
-    <div class="loader">
-      <img src="/assets/img/logo.svg" alt="">
-      <h2>Cargando.....</h2>
-    </div>
-  </div>
-  <!-- Page Preloder -->
-  <app-root></app-root>
-</body>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-
-<script type="text/javascript" src="/assets/js/jquery-2.1.4.min.js"></script>
-<script type="text/javascript" src="/assets/js/magnific-popup.min.js"></script>
-<script type="text/javascript" src="/assets/js/owl.carousel.min.js"></script>
-<script type="text/javascript" src="/assets/js/circle-progress.min.js"></script>
-<!-- WhatsHelp.io widget -->
-<script type="text/javascript" src="./assets/js/widget.js"></script>
-<!-- /WhatsHelp.io widget -->
-<script type="text/javascript" src="/assets/js/main.js"></script>
-<!-- <script type="text/javascript" src="/assets/js/map.js"></script> -->
+        <!-- javascript to bootstrap 4 -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+        <!-- /javascript to bootstrap 4 -->
+        <!-- javascript to template -->
+        <script type="text/javascript" src="./assets/js/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="./assets/js/magnific-popup.min.js"></script>
+        <script type="text/javascript" src="./assets/js/owl.carousel.min.js"></script>
+        <script type="text/javascript" src="./assets/js/circle-progress.min.js"></script>
+        <script type="text/javascript" src="./assets/js/widget.js"></script>
+        <script type="text/javascript" src="./assets/js/main.js"></script>
+        <!-- <script type="text/javascript" src="/assets/js/map.js"></script> -->
+        <!-- /javascript to template -->
+    </body>
 
 </html>

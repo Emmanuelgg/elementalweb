@@ -106,32 +106,20 @@
                 </div>
                 <div class="owl-carousel" id="testimonial-slide">
                     <!-- single testimonial -->
-                    <div class="testimonial">
+                    <div class="testimonial" *ngFor="let commentary of commentaries ">
                         <span>‘​‌‘</span>
-                        <p>Exelente trabajo, quede muy satisfecho con mi sitio web</p>
+                        <p>{{ commentary.commentary }}</p>
                         <div class="client-info">
                             <div class="avatar">
-                                <img src="img/avatar/01.jpg" alt="">
+                                <img src="{{ commentary.img }}" alt="">
                             </div>
                             <div class="client-name">
-                                <h2>Alejandra Gutierrez</h2>
-                                <p>Centenario</p>
+                                <h2>{{ commentary.name }}</h2>
+                                <p>{{ commentary.company_name }}</p>
                             </div>
                         </div>
                     </div>
-                    <div class="testimonial">
-                        <span>‘​‌‘​‌</span>
-                        <p>Exelente trato al cliente, el mejor diseño y atención</p>
-                        <div class="client-info">
-                            <div class="avatar">
-                                <img src="img/avatar/01.jpg" alt="">
-                            </div>
-                            <div class="client-name">
-                                <h2>Gloria García</h2>
-                                <p>Bio-farma</p>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- single testimonial -->
                 </div>
             </div>
         </div>

@@ -1,5 +1,41 @@
-<app-header></app-header>
+<!-- Page Preloder -->
+<div id="preloder">
+    <div class="loader">
+        <img src="/assets/img/logo.svg" alt="">
+        <h2>Cargando.....</h2>
+    </div>
+</div>
+<!-- /Page Preloder -->
+
+<!-- header -->
+<header class="header-section">
+    <!-- Logo -->
+    <div class="logo">
+        <a [routerLink]="['dashboard']"><img src="/assets/img/logo.svg" alt="logo de elementalweb creador de sitios web" title="Logo de Elemental web"></a>
+    </div>
+    <!-- /Logo -->
+    <!-- Navigation -->
+    <div class="responsive"><i class="fa fa-bars"></i></div>
+    <nav>
+        <ul class="menu-list">
+            <li [routerLinkActive]="['active']"><a [routerLink]="['dashboard']">Inicio</a></li>
+            <li [routerLinkActive]="['active']"><a [routerLink]="['services']">Servicios</a></li>
+            <li [routerLinkActive]="['active']"><a [routerLink]="['about-us']">Nosotros</a></li>
+            <li [routerLinkActive]="['active']"><a [routerLink]="['contact']">Contacto</a></li>
+        </ul>
+    </nav>
+    <!-- /Navigation -->
+</header>
+<!-- /header -->
+
+<!-- main -->
 <main role="main" class="cointainer-fluid">
     <router-outlet></router-outlet>
 </main>
-<app-footer></app-footer>
+<!-- /main -->
+
+<!-- footer -->
+<footer class="footer-section fixed-bottom">
+    <h2>© 2018 Elemental web, All Rights Reserved. Designed by <a href="http://elementalweb.com.mx" target="_blank">Elemental</a></h2>
+</footer>
+<!-- /footer -->

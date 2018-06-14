@@ -1,15 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-about-us',
-  templateUrl: './about-us.component.html',
-  styleUrls: ['./about-us.component.css']
+	selector: 'app-about-us',
+	templateUrl: './about-us.component.html',
+	styleUrls: ['./about-us.component.css']
 })
 export class AboutUsComponent implements OnInit {
 
-  constructor() { }
+    team : Array<any> = [
+        {
+            id: 1,
+            name: "Emmanuel García Gutiérrez",
+            occupation: "Proyect Manager",
+            img: "../assets/img/logo.svg"
+        }
+    ]
 
-  ngOnInit() {
-  }
+	constructor() { }
+
+	ngOnInit() {
+
+	}
 
 }
