@@ -2,7 +2,7 @@ export let challenges: Array<any> = [
 	{
 		id: 1,
 		name: "Pagina web (Gratis)",
-		description: "Gana una página web completamente gratis, si quieres mas información puede contactarnos.",
+		description: "Gana una página web completamente gratis, si quieres mas información también puedes contactarnos.",
         winner: "Emmanuel"
 		instructions: [
             {
