@@ -4,8 +4,6 @@ import { Title } from '@angular/platform-browser';
 
 import { challenges } from './challenge.data'
 
-import { first } from 'rxjs/operators';
-
 @Component({
 	selector: 'app-challenge',
 	templateUrl: './challenge.component.html',

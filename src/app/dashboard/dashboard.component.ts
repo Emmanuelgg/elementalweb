@@ -34,7 +34,7 @@ export class DashboardComponent implements OnInit {
 		}
 	]
 
-	constructor(private dataService: DataService, private titleService: Title) {
+	constructor(private titleService: Title) {
 
 	}
 	res: any;
@@ -50,13 +50,10 @@ export class DashboardComponent implements OnInit {
 	}
 
 	ngOnInit() {
-		this.getIpAdress();
+
 	}
 
-	getIpAdress() {
-		this.dataService.getIpAdress().subscribe(
-			response => console.log(response)
-		);
-	}
+
+
 
 }
