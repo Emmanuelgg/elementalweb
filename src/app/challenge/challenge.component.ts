@@ -4,6 +4,8 @@ import { Title } from '@angular/platform-browser';
 
 import { challenges } from './challenge.data'
 
+import { first } from 'rxjs/operators';
+
 @Component({
 	selector: 'app-challenge',
 	templateUrl: './challenge.component.html',
@@ -12,6 +14,7 @@ import { challenges } from './challenge.data'
 export class ChallengeComponent implements OnInit {
 
     challenges = challenges;
+	challenge : any;
 
 	constructor(private titleService: Title) { }
 
@@ -20,6 +23,11 @@ export class ChallengeComponent implements OnInit {
 
 	ngAfterViewInit() {
 		this.titleService.setTitle('Elemental | Consursos')
+	}
+
+	getChallenge(id: number){
+		this.challenge = challenges.filter(challenge => id == challenge.id)
+		this.challenge = this.challenge[0]
 	}
 
 }

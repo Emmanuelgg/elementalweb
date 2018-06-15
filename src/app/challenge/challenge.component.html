@@ -11,15 +11,55 @@
                         <div class="card-body">
                             <h3 class="card-title">{{ challenge.name }}</h3>
                             <p class="card-text" style="color:#6a23b5;">{{ challenge.description }}</p>
-                            <a [routerLink]="['./detail/1']" class="site-btn">Ver detalles</a>
+                            <a class="site-btn" href="#" data-toggle="modal" data-target="#details"  (click)="this.getChallenge(challenge.id)">Ver detalles</a>
                             <br/>
                             <br/>
-                            <h6>{{ challenge.available }}</h6>
+                            <h6>{{ challenge.status == 1 ? "Disponible" : "Finalizada"}}</h6>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="text-center mt60"><a class="site-btn" [routerLink]="['../contact']">Contactar</a></div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="details" tabindex="-1" role="dialog" aria-labelledby="detailsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content" *ngIf="challenge">
+            <div class="modal-header">
+                <h5 class="modal-title text-center" id="detailsModalLabel" style="color:#2be6ab;">{{ challenge.name }} - {{ challenge.status == 1 ? "Disponible" : "Finalizada"}}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div *ngIf="(challenge.winner || challenge.winner !== '') && challenge.status == 2">
+                    <div class="col-12  text-justify">
+                        <h6>Ganador</h6>
+                        <p>{{ challenge.winner }}</p>
+                    </div>
+                </div>
+                <div class="col-12 text-justify">
+                    <h6>Descripción</h6>
+                    <p>{{ challenge.description }}</p>
+                </div>
+                <div class="col-12 text-justify">
+                    <h6>Instrucciones</h6>
+                    <p *ngFor="let instruction of challenge.instructions" style="margin-bottom:0em;">
+                        <span style="color:#2be6ab;">{{ instruction.number }}: </span>
+                        <span>{{ instruction.text }} <a *ngIf="instruction.url || instruction.url !== ''" href="{{ instruction.url }}" target="_blank">Ver sitio</a></span>
+                    </p>
+                </div>
+                <br/>
+                <div class="col-12 text-justify">
+                    <h6 style="font-size:8pt;">Restricciones</h6>
+                    <p *ngFor="let restriction of challenge.restrictions" style="font-size:7pt; margin-bottom:-1em;">{{ restriction }}</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="site-btn btn-2" data-dismiss="modal" style="min-width:50px; height:50px;">Close</button>
+            </div>
+        </div>
     </div>
 </div>

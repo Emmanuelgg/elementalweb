@@ -10,7 +10,6 @@ import { ContactComponent } from './contact/contact.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ServicesComponent } from './services/services.component';
 import { ChallengeComponent } from './challenge/challenge.component';
-import { DetailChallengeComponent } from './challenge/detail-challenge/detail-challenge.component';
 
 @NgModule({
   declarations: [
@@ -19,8 +18,7 @@ import { DetailChallengeComponent } from './challenge/detail-challenge/detail-ch
     ContactComponent,
     AboutUsComponent,
     ServicesComponent,
-    ChallengeComponent,
-    DetailChallengeComponent
+    ChallengeComponent
   ],
   imports: [
     BrowserModule,
