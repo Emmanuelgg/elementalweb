@@ -17,7 +17,7 @@ export class AppComponent {
     getVisitors(){
 		this.dataService.visitorCounter().subscribe(
 			(response) => {
-				this.dataService.getTableDisctint('get/distinct', 'visitors', 'ip_address').subscribe(
+				this.dataService.getTableDisctint('get/distinct', 'visitor', 'ip_address').subscribe(
 					response => {
                         this.visitorCounter = response.data.length
                     }

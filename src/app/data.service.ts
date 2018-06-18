@@ -22,7 +22,7 @@ export class DataService {
 	constructor(private http: HttpClient) {
 	}
 
-	getTable(url: string = 'get/all', collection: string = 'visitors', order: any = {_id: 1}, limit: number = 0): Observable<any> {
+	getTable(url: string = 'get/all', collection: string = 'visitor', order: any = {_id: 1}, limit: number = 0): Observable<any> {
         let data = {collection, limit, order};
 		return this.http.post(apiUrl + url, data, httpOptions)
 			.pipe(
@@ -30,7 +30,7 @@ export class DataService {
 			);
 	}
 
-    getTableDisctint(url: string = 'get/all', collection: string = 'visitors',distinct: string = "ip_address"): Observable<any> {
+    getTableDisctint(url: string = 'get/all', collection: string = 'visitor',distinct: string = "ip_address"): Observable<any> {
         let data = {collection, distinct};
 		return this.http.post(apiUrl + url, data, httpOptions)
 			.pipe(
@@ -38,7 +38,7 @@ export class DataService {
 			);
 	}
 
-    visitorCounter(url: string = 'save', collection: string = 'visitors', form: any = {counter: 1}): Observable<any> {
+    visitorCounter(url: string = 'save', collection: string = 'visitor', form: any = {counter: 1}): Observable<any> {
         let data = {
             collection,
             form
@@ -49,7 +49,7 @@ export class DataService {
 			);
 	}
 
-    insertTable(url: string = 'save', collection: string = 'visitors', form: any = null): Observable<any> {
+    insertTable(url: string = 'save', collection: string = 'visitor', form: any = null): Observable<any> {
         let data = {
             collection,
             form
