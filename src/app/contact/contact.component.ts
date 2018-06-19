@@ -1,20 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Title }     from '@angular/platform-browser';
+import { Title } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-contact',
-  templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.css']
+	selector: 'app-contact',
+	templateUrl: './contact.component.html',
+	styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
 
-  constructor(private titleService: Title) { }
+	lat: number = 19.7037327;
+	lng: number = -101.2411434;
+    title: string = 'Elemental web'
+    zoom: number = 10
 
-  ngOnInit() {}
+	constructor(private titleService: Title) { }
 
-  ngAfterViewInit(){
-      this.titleService.setTitle('Elemental | Contacto')
-  }
+	ngOnInit() { }
+
+	ngAfterViewInit() {
+		this.titleService.setTitle('Elemental | Contacto')
+	}
 
 }

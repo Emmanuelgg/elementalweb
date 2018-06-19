@@ -11,6 +11,9 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { ServicesComponent } from './services/services.component';
 import { ChallengeComponent } from './challenge/challenge.component';
 
+// google maps
+import { AgmCoreModule } from '@agm/core';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +26,10 @@ import { ChallengeComponent } from './challenge/challenge.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCixK-I-lHch_t6_9q_Qv-hHyH2Fjb8BvU'
+    })
   ],
   providers: [Title],
   bootstrap: [AppComponent]

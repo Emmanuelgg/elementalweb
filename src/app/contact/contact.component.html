@@ -64,14 +64,13 @@
         </div>
     </div> -->
     <!-- Contact section end-->
-
 <div class="services-section spad fix">
     <div class="container">
         <div class="section-title dark">
             <h2>Contactanos <span>Elemental</span></h2>
         </div>
         <div class="contact-info">
-            <div class="row text-center">
+            <!-- <div class="row text-center">
                 <div class="col-4">
                     <a href="https://api.whatsapp.com/send?phone=524433497798&text=Estoy%20interesado%20por%20un%20servicio%20quiero%20mas%20información" target="_blank" title="Whatsapp de elementalweb (+52) 443-349-7798"><h3 class="mt60">Whatsapp</h3></a>
                     <a href="https://api.whatsapp.com/send?phone=524433497798&text=Estoy%20interesado%20por%20un%20servicio%20quiero%20mas%20información" target='_blank' title="Icono de whatsapp para contactar a elementalweb (+52) 443-349-7798"><img src="/assets/img/whatsapp.svg" style="width:50px; height:50px;"></a>
@@ -94,7 +93,10 @@
                     <a href="https://m.me/elementalweb" target='_blank' title="Messenger de elementalweb"><h3 class="mt60">Messenger</h3></a>
                     <a href="https://m.me/elementalweb" target='_blank' title="Icono de messenger para contactar a  elementalweb"><img src="/assets/img/messenger.svg" alt="Icono de instagram para acceder a elementalweb" style="width:50px; height:50px;"></a>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom"  style="height: 400px; width:100%;">
+    <agm-marker [latitude]="lat" [longitude]="lng" [title]="title"></agm-marker>
+</agm-map>
