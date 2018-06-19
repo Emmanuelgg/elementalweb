@@ -12,6 +12,8 @@ const connection = (closure) => {
         if (err) return console.log(err);
         db = client.db('elemental');
         closure(db);
+        client.close();
+
     });
 };
 
