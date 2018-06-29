@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { Title } from '@angular/platform-browser';
 
+import { DataService } from '../data.service'
+
 @Component({
 	selector: 'app-contact',
 	templateUrl: './contact.component.html',
@@ -9,17 +11,17 @@ import { Title } from '@angular/platform-browser';
 })
 export class ContactComponent implements OnInit {
 
-	lat: number = 19.7037327;
-	lng: number = -101.2411434;
-    title: string = 'Elemental web'
-    zoom: number = 10
-
-	constructor(private titleService: Title) { }
+	constructor(private titleService: Title, private dataService: DataService) { }
 
 	ngOnInit() { }
 
 	ngAfterViewInit() {
 		this.titleService.setTitle('Elemental | Contacto')
+	}
+
+	onSubmit(form : ngForm){
+		form = form.form.value
+
 	}
 
 }

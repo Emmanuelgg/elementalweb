@@ -270,6 +270,22 @@ ul {
 	padding-top: 30px;
 }
 
+.header-section .social-networks {
+	display: inline-block;
+	float: left;
+	width: 225px;
+	margin-left: 30px;
+	margin-top: 17px;
+
+}
+
+.header-section .social-networks a {
+	width: auto;
+	-webkit-transition: all 0.4s ease 0s;
+	-o-transition: all 0.4s ease 0s;
+	transition: all 0.4s ease 0s;
+}
+
 .header-section .logo img {
 	width: auto;
 	-webkit-transition: all 0.4s ease 0s;
@@ -1529,6 +1545,12 @@ ul {
 		left: 50%;
 		margin-left: -4px;
 	}
+	.header-section .social-networks {
+		float: right;
+	}
+	main {
+		margin-top: 10%;
+	}
 }
 
 
@@ -1536,6 +1558,12 @@ ul {
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 	.test-overlay {
 		display: none;
+	}
+	.header-section .social-networks {
+		float: right;
+	}
+	.header-section .menu-list {
+		vertical-align: middle;
 	}
 	#testimonial-slide .owl-dots {
 		top: 95%;
@@ -1592,6 +1620,17 @@ ul {
 	.header-section .logo {
 		padding-top: 20px;
 		padding-bottom: 20px;
+	}
+	.header-section .social-networks {
+		margin: 0 auto;
+		width: 100%;
+		text-align: center;
+	}
+	.header-section .social-networks a {
+	    font-size: 1.8em !important;
+	}
+	.header-section .social-networks i{
+		padding-left: 10px !important;
 	}
 	.header-section .menu-list {
 		display: none;

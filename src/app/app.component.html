@@ -9,7 +9,12 @@
 
 <!-- header -->
 <header class="header-section">
-    <div class="col-12 fixed-top">
+    <!-- Logo -->
+    <div class="logo">
+        <a [routerLink]="['dashboard']"><img src="/assets/img/logo.svg" alt="logo de elementalweb creador de sitios web" title="Logo de Elemental web"></a>
+    </div>
+    <!-- /Logo -->
+    <div class="social-networks">
         <a href="https://www.facebook.com/elementalweb/" target='_blank' title="Facebook de elementalweb" style="font-size:2em;">
             <i class="fa fa-facebook-square" aria-hidden="true" style="padding-left: 25%; color: #6a23b5;"></i>
         </a>
@@ -23,11 +28,6 @@
             <i class="fa fa-envelope" aria-hidden="true" style="padding-left: 15px; color: #6a23b5;"></i>
         </a>
     </div>
-    <!-- Logo -->
-    <div class="logo">
-        <a [routerLink]="['dashboard']"><img src="/assets/img/logo.svg" alt="logo de elementalweb creador de sitios web" title="Logo de Elemental web"></a>
-    </div>
-    <!-- /Logo -->
     <!-- Navigation -->
     <div class="responsive"><i class="fa fa-bars"></i></div>
     <nav>
