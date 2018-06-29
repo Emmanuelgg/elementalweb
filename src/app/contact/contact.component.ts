@@ -19,7 +19,7 @@ export class ContactComponent implements OnInit {
 		this.titleService.setTitle('Elemental | Contacto')
 	}
 
-	onSubmit(form : ngForm){
+	onSubmit(form : any){
 		form = form.form.value
 
 	}
