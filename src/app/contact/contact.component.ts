@@ -11,6 +11,11 @@ import { DataService } from '../data.service'
 })
 export class ContactComponent implements OnInit {
 
+	name : any
+	email : any
+	subject : any
+	message : any
+
 	constructor(private titleService: Title, private dataService: DataService) { }
 
 	ngOnInit() { }
