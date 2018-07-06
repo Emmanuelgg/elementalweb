@@ -22,6 +22,14 @@ export class DataService {
 	constructor(private http: HttpClient) {
 	}
 
+	login(url: string = 'login', form: any): Observable<any> {
+        let data = { form };
+		return this.http.post(apiUrl + url, data, httpOptions)
+			.pipe(
+				// catchError((error) => {console.log(error)} )
+			);
+	}
+
 	getTable(url: string = 'get/all', collection: string = 'visitor', order: any = {_id: 1}, limit: number = 0): Observable<any> {
         let data = {collection, limit, order};
 		return this.http.post(apiUrl + url, data, httpOptions)

@@ -790,6 +790,13 @@ ul {
 	background: #f6edfb;
 	padding: 17px 20px;
 }
+.form-class input[type="password"] {
+	width: 100%;
+	margin-bottom: 26px;
+	border: none;
+	background: #f6edfb;
+	padding: 17px 20px;
+}
 
 .form-class input[type="text"]:focus,
 .form-class input[type="text"]:hover {

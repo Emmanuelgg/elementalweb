@@ -15,6 +15,7 @@ import { ChallengeComponent } from './challenge/challenge.component';
 
 // google maps
 import { AgmCoreModule } from '@agm/core';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { AgmCoreModule } from '@agm/core';
     ContactComponent,
     AboutUsComponent,
     ServicesComponent,
-    ChallengeComponent
+    ChallengeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

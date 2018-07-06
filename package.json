@@ -27,6 +27,8 @@
     "hoek": "^5.0.3",
     "jquery": "^3.3.1",
     "mongodb": "^3.0.10",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
     "popper.js": "^1.14.3",
     "rxjs": "^6.0.0",
     "zone.js": "^0.8.26"

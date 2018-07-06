@@ -1,0 +1,21 @@
+<div class="spad fix">
+    <form class="form-class" id="login_form" #formLogin="ngForm" name="formLogin" (ngSubmit)="onSubmit(formLogin)" encType="multipart/form-data">
+        <div class="row justify-content-md-center">
+            <div class="col-lg-3 col-md-6 col-sm-9 text-center">
+                <label for="username"><h6>Usuario</h6></label>
+                <input type="text" name="username" placeholder="Escribe tu usuario" (ngModel)="username">
+            </div>
+        </div>
+        <div class="row justify-content-md-center text-center">
+            <div class="col-lg-3 col-md-6 col-sm-9 text-center">
+                <label for="password"><h6>Contraseña</h6></label>
+                <input type="password" name="password" (ngModel)="password">
+            </div>
+        </div>
+        <div class="row justify-content-md-center">
+            <div class="col-12 text-center">
+                <button class="site-btn" type="submit">Log-in</button>
+            </div>
+        </div>
+    </form>
+</div>

@@ -5,6 +5,9 @@ const app = express();
 const MongoClient = require('mongodb').MongoClient;
 const ObjectID = require('mongodb').ObjectID;
 
+var passport = require('passport'),
+    LocalStrategy = require('passport-local').Strategy;
+
 var db;
 // Connect
 const connection = (closure) => {
@@ -30,6 +33,45 @@ let response = {
     data: [],
     message: null
 };
+
+// passport.use(new LocalStrategy(
+//     function(username, password, done) {
+//         console.log(username);
+//         db.collection('user').findOne({ username: username }, function(err, user) {
+//
+//             if (err) { return done(err); }
+//             if (!user){
+//                       return done(null, false, { message: 'Incorrect username.' });
+//             }
+//
+//             if (!user.validPassword(password)){
+//                 return done(null, false, { message: 'Incorrect password.' });
+//             }
+//             return done(null, false, { message: 'Incorrect password.' });
+//         });
+//     }
+// ));
+
+// router.post('/login', (req, res) => {
+//     let username = req.body.form.username
+//     passport.authenticate('local', { successRedirect: '/', failureRedirect: '/login', failureFlash: true })
+// });
+
+// router.post('/login', passport.authenticate('local'),
+//     function(req, res) {
+//       // If this function gets called, authentication was successful.
+//       // `req.user` contains the authenticated user.
+//       let username = req.body.form.username
+//       res.redirect('/users/' + username);
+//     }
+// );
+//
+// app.get('/api/users/',
+//   passport.authenticate('basic', { session: false }),
+//   function(req, res) {
+//     res.json({ username: req.username });
+//   });
+
 
 //get table
 router.post('/get/all', (req, res) => {
