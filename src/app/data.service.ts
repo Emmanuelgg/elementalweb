@@ -12,7 +12,7 @@ const httpOptions = {
 	})
 };
 
-const apiUrl = '/api/';
+const apiUrl = 'https://107.180.3.75:6443/api/';
 
 @Injectable({
 	providedIn: 'root'
